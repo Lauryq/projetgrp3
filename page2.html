@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,41 +9,81 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/00013238cf.js" crossorigin="anonymous"></script>
     <title>AFA - Accessibility for all.</title>
+    <style>
+        #menu-toggle:checked + #menu {
+        display: block;
+        }
+    </style>
 </head>
+
 <body>
-    <header class="flex justify-between border-b-2 border-black divide-solid">
- 
-        <a href="index.html"><img class="w-3/5" src="images/logo.jpg" alt="logo du site, cercle violet avec le diminutif AFA à l'intérieur"></a> 
 
-  
-    <nav class="mt-10">
+    <header class="flex justify-between sm:border-b-2 border-black divide-solid">
+    
+          <!--Menu mobile-->
         
-        <a href="page1.html"><i class="fas fa-eye fa-5x pr-44 hover:underline"></i></a>
-        <a href="page2.html"><i class="fab fa-accessible-icon fa-5x pr-44 hover:underline"></i></a>
-        <a href="page3.html"><i class="fas fa-deaf fa-5x pr-44 hover:underline"></i></a>
-        <a href="page4.html"><i class="fas fa-brain fa-5x pr-28 hover:underline"></i></a>
+          <a href="index.html"><img class="w-3/5" src="images/logo.jpg" alt="logo du site, cercle violet avec le diminutif AFA à l'intérieur"></a>
 
-    </nav>
-    <h1 class="hidden">Avec AFA apprenez tout ce que vous devez savoir sur l'accessibilité numérique !</h1>
+          <div class="lg:flex-col">   
 
-</header>
+          <label for="menu-toggle" class="cursor-pointer sm:hidden block"><i class="fas fa-bars fa-7x p-6 text-pinkpurple"></i></label>      
+          <input type="checkbox" class="hidden" id="menu-toggle" />
+          
+          <div class="hidden lg:flex lg:items-center lg:w-auto w-full lg:hidden" id="menu">
 
-<main>
-    <h2 class="text-6xl text-center pt-32 pb-10 ">Accessibilité motrice </h2>
+              <nav>
 
-        <p class="text-justify px-96 pb-5"> Obstacles : Le handicap moteur réduit la capacité de se servir d’une souris ou d’un clavier, il fait aussi référence au manque de réactivité. Le handicap moteur regroupe plusieurs formes limitant les mouvements de la personne. Il désigne aussi les personnes ayant des difficultés pour réaliser des combinaisons de touches et les personnes atteintes de la maladie de Parkinson. Mais alors comment améliorer l’accessibilité d’un site ? </p>
+                  <ul class="lg:flex items-center justify-between text-base pt-4 sm:pt-0">
+
+                      <li><a href="page1.html" class="lg:p-4 py-3 px-0 block border-b-2 border-transparent text-white bg-pinkpurple rounded-lg hover:bg-darkpurple">Accessibilité visuel<a><li>
+                      
+                      <li><a href="page2.html" class="lg:p-4 py-3 px-0 block border-b-2 border-transparent text-white bg-pinkpurple rounded-lg hover:bg-darkpurple">Accessibilité motrice</a></li>
+
+                      <li><a href="page3.html" class="lg:p-4 py-3 px-0 block border-b-2 border-transparent text-white bg-pinkpurple rounded-lg hover:bg-darkpurple">Le handicap auditif</a></li>
+
+                      <li><a href="page4.html" class="lg:p-4 py-3 px-0 block border-b-2 border-transparent text-white bg-pinkpurple rounded-lg hover:bg-darkpurple">Le handicap cognitif</a></li>
+              
+                  </ul>
+
+              </nav>
+              </div>
+          </div>
+    
+        <!--Menu Desktop-->   
+                <nav class=" hidden md:inline-flex mt-10">
+                
+                    <a href="page1.html"><i class="fas fa-eye fa-5x pr-44 hover:underline"></i></a>
+                    <a href="page2.html"><i class="fab fa-accessible-icon fa-5x pr-44 hover:underline"></i></a>
+                    <a href="page3.html"><i class="fas fa-deaf fa-5x pr-44 hover:underline"></i></a>
+                    <a href="page4.html"><i class="fas fa-brain fa-5x pr-28 hover:underline"></i></a>
+                    
+                </nav>
+                
+                <h1 class="hidden">Avec AFA apprenez tout ce que vous devez savoir sur l'accessibilité numérique !</h1>
+            
+    </header>
+
+<!--Début Section Principale-->
+    <main>
+
+        <h2 class="text-center pt-32 pb-10 font-title sm:text-6xl ">Accessibilité motrice </h2>
+
+        <p class="text-justify mx-14 pb-5 sm:px-96 "> Obstacles : Le handicap moteur réduit la capacité de se servir d’une souris ou d’un clavier, il fait aussi référence au manque de réactivité. Le handicap moteur regroupe plusieurs formes limitant les mouvements de la personne. Il désigne aussi les personnes ayant des difficultés pour réaliser des combinaisons de touches et les personnes atteintes de la maladie de Parkinson. Mais alors comment améliorer l’accessibilité d’un site ? </p>
+
+        <p class="text-justify mx-14 pb-48 sm:px-96 ">Solutions : Et bien c’est très simple les solutions pour faciliter l’accessibilité sont nombreuses. Pour adapter un contenu nous devons prendre en compte l’ergonomie du site. Nous pouvons leur proposer par exemple une navigation au clavier. Ainsi qu’agrandir les zones d’actions pour avoir plus d’espace où cliquer. Il est aussi important de noter que bien structurer le texte (titres, sous-titres etc.) reste une très bonne pratique.</p>
 
 
-        <p class="text-justify px-96 pb-56">Solutions : Et bien c’est très simple les solutions pour faciliter l’accessibilité sont nombreuses. Pour adapter un contenu nous devons prendre en compte l’ergonomie du site. Nous pouvons leur proposer par exemple une navigation au clavier. Ainsi qu’agrandir les zones d’actions pour avoir plus d’espace où cliquer. Il est aussi important de noter que bien structurer le texte (titres, sous-titres etc.) reste une très bonne pratique.</p>
-
-
-</main>
+    </main>
+<!--Fin Section Principale-->
 
 
 
 
-    <footer class="pt-52" >
-    <p class="bg-violet1 text-white text-right p-3" >© Clément POUPENEY - Laury QUARTO - Nadil TAHAR</p>
-</footer>
+    <footer class="pt-52" ><!--Bas de page-->
+
+        <p class="bg-pinkpurple text-white text-right p-3" >© Clément POUPENEY - Laury QUARTO - Nadil TAHAR</p>
+
+    </footer>
+
 </body>
 </html>
